@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import { Form, message } from "antd";
+import * as Icons from "@ant-design/icons";
 import Button from "../../components/Button";
 import { Link, useNavigate } from "react-router-dom";
 import { LoginUser } from "../../apicalls/users";
@@ -36,22 +37,26 @@ function Register() {
   return (
     <div className="flex justify-center h-screen items-center bg-primary">
       <div className="card p-3 w-400">
-        <h1 className="text-xl mb-1">SHEYMOVIES - LOGIN</h1>
-        <hr />
+        <h1 className="text-xl mb-1">LOGIN</h1>
+       
         <Form layout="vertical" className="mt-1" onFinish={onFinish}>
           <Form.Item
-            label="Email"
+            label=""
             name="email"
             rules={[{ required: true, message: "Please input your email!" }]}
           >
-            <input type="email" />
+            <input placeholder= "Username" 
+                  prefix={<Icons.UserOutlined />}
+                  type="email" />
           </Form.Item>
           <Form.Item
-            label="Password"
+            label=""
             name="password"
             rules={[{ required: true, message: "Please input your password!" }]}
           >
-            <input type="password" />
+            <input placeholder= "Password" 
+                  prefix={<Icons.UserOutlined />} 
+                  type="password" />
           </Form.Item>
 
           <div className="flex flex-col mt-2 gap-1">
