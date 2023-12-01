@@ -29,10 +29,6 @@ if (process.env.NODE_ENV === "production") {
   });
 }
 
-
-
-
-
 app.listen(port, () =>
   console.log(`Node JS Server is running on port ${port}`)
 );
